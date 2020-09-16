@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Description>A tool from the Integration Playbook which will run and generate a report on all of the errors from logic apps within your environment in a specific date range.</Description>
+    <PackageReleaseNotes>This is an initial release for the logic app error report</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/michaelstephensonuk/IntegrationPlaybook-LogicAppErrorReport</RepositoryUrl>
+    <Copyright>Integration Playbook 2020</Copyright>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Company>Integration Playbook</Company>
+    <Authors>Michael Stephenson</Authors>
+    <Product>LogicApps ErrorReport Generator</Product>
+    <PackageProjectUrl>https://github.com/michaelstephensonuk/IntegrationPlaybook-LogicAppErrorReport</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="4.5.3.3" />
+    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Azure.Management.Logic" Version="4.1.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="5.2.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Pack.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ReadMe.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="VERIFICATION.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
